@@ -1,4 +1,4 @@
-import {IColorPatch} from '../i-color-patch';
+import {IColorPatch} from './color-patch.interface';
 
 export class ColorPatch implements IColorPatch {
     r: number;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ColorPatch } from '../models/color-patch';
-import { ColorPatchesService } from '../services/color-patches.service';
+import * as colorPatch from './color-patch/color-patch.class';
+import { ColorPatchesService } from '../colorpatches/color-patch/color-patches.service';
 
 @Component({
   selector: 'app-colorpatches',
@@ -10,7 +10,7 @@ import { ColorPatchesService } from '../services/color-patches.service';
 export class ColorpatchesComponent implements OnInit {
 
   private myName: String = 'Mark';
-    currentPatch: ColorPatch;
+    currentPatch: colorPatch.ColorPatch;
     colorPatchArray = [];
 
   constructor(private colorPatchesService: ColorPatchesService) {

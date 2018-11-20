@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { createInput } from '@angular/compiler/src/core';
-import { ColorPatch } from 'src/app/models/color-patch';
+import { ColorPatch } from './color-patch.class';
+
 
 
 @Component({

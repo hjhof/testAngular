@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ColorPatch } from '../models/color-patch';
+import { ColorPatch } from './color-patch.class';
 
 @Injectable({
   providedIn: 'root'
