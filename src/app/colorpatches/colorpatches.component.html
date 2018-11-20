@@ -1,0 +1,19 @@
+<input [(ngModel)]="currentPatch.name">
+<br>
+<div (input)="onChangeSliders($event)">
+<input [(ngModel)]="currentPatch.r" type="range" min="0" max="255" ><output>{{currentPatch.r}}</output>
+<br>
+<input [(ngModel)]="currentPatch.g" type="range" min="0" max="255"><output>{{currentPatch.b}}</output>
+<br>
+<input [(ngModel)]="currentPatch.b" type="range" min="0" max="255"><output>{{currentPatch.g}}</output>
+<br>
+<input [(ngModel)]="currentPatch.a" type="range" min="0" step="0.01" max="1"><output>{{currentPatch.a}}</output>
+</div>
+
+{{myName}}
+<br>
+<div [style.background-color] = "currentPatch.rgba" [style.height.px] = "200" [style.color]= "currentPatch.textcolor">{{currentPatch.rgba}}</div>
+
+<div class="PatchContainer">
+    <app-color-patch *ngFor="let item of colorPatchArray" [inPatch]= "item" (selectPatch)="setActivePatch($event)"></app-color-patch>
+</div>

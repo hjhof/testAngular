@@ -1,0 +1,10 @@
+.Patch{
+    width : 100px;
+    height : 100px;
+    text-align: center;
+}
+
+.PatchContainer{
+    display: flex;
+    justify-content: space-around;
+}
