@@ -10,6 +10,7 @@ import { ColorpatchesComponent } from './colorpatches/colorpatches.component';
 import { MemorygameComponent } from './memorygame/memorygame.component';
 import { EigenappComponent } from './eigenapp/eigenapp.component';
 import { ColorPatchComponent } from './colorpatches/color-patch/color-patch.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ColorPatchComponent } from './colorpatches/color-patch/color-patch.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,21 +12,33 @@ export class ColorpatchesComponent implements OnInit {
   private myName: String = 'Mark';
     currentPatch: colorPatch.ColorPatch;
     colorPatchArray = [];
+    untouched = true;
 
   constructor(private colorPatchesService: ColorPatchesService) {
 
-    this.colorPatchArray = this.colorPatchesService.getColorPatchArray();
-    this.currentPatch = this.colorPatchArray[0];
   }
 
   ngOnInit() {
+    this.colorPatchesService.getColorPatchArray()
+      .subscribe(data => this.colorPatchArray = data);
+      this.currentPatch = this.colorPatchesService.colorPatchArray[0];
   }
+
   setActivePatch(e) {
     this.currentPatch = e;
   }
 
   onChangeSliders(event) {
     this.currentPatch.generateRgbValue();
+    this.untouched = false;
   }
 
+  storePatches() {
+    this.colorPatchesService.storePatches(this.colorPatchArray);
+    this.untouched = false;
+  }
+
+  addPatch() {
+    this.colorPatchesService.addColorPatch();
+  }
 }

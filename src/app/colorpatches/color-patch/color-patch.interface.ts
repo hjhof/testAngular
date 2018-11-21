@@ -5,7 +5,7 @@ export interface IColorPatch {
     a: number;
     rgba: string;
     name: string;
-    
+
     generateRgbValue();
 
 }
