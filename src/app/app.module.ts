@@ -11,6 +11,7 @@ import { MemorygameComponent } from './memorygame/memorygame.component';
 import { EigenappComponent } from './eigenapp/eigenapp.component';
 import { ColorPatchComponent } from './colorpatches/color-patch/color-patch.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

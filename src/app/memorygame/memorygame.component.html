@@ -1,3 +1,22 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<label>
+  Name:
+  <input type="text" formControlName="name">
+</label>
+<br>
+<label>
+  BTW:
+  <input type="checkbox" formControlName="btw" (change)="chooseTax()">
+</label>
+<br>
+<label>
+  BTW Tarief:
+  <input type="text" formControlName="btwTarief">
+</label>
 <p>
-  memorygame works!
+  Value: {{myForm.controls['name'].Value}}
 </p>
+<button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>
+
+
